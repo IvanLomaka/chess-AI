@@ -1,0 +1,25 @@
+{
+  "name": "chessai",
+  "version": "1.0.0",
+  "description": "Chess AI with python and javascript",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "chess",
+    "Ai",
+    "python",
+    "javascript"
+  ],
+  "author": "Lomaka Ivan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

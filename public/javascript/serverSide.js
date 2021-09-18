@@ -1,0 +1,1 @@
+socket.on('chessEval', (msg) => console.info(msg))
