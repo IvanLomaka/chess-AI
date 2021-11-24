@@ -43,7 +43,7 @@ let datiDiGioco = {
     coloreAI: 'N',
     turnoAIvsAI: false,
     partitaFinita: false,
-    usePython: true,
+    usePython: false,
 }
 
 let table = [
@@ -194,7 +194,7 @@ giocaOffline.addEventListener('click', button => {
         coloreAI: 'N',
         turnoAIvsAI: false,
         partitaFinita: false,
-        usePython: true,
+        usePython: false,
     }
 })
 
@@ -213,7 +213,7 @@ giocaControAI.addEventListener('click', button => {
         coloreAI: 'N',
         turnoAIvsAI: false,
         partitaFinita: false,
-        usePython: true,
+        usePython: false,
     }
 })
 
@@ -232,7 +232,7 @@ AIvsAI.addEventListener('click', button => {
         coloreAI: 'N',
         turnoAIvsAI: true,
         partitaFinita: false,
-        usePython: true,
+        usePython: false,
     }
 })
 
