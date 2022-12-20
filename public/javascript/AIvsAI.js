@@ -1,3 +1,6 @@
+const AIvsAIDepthWhite = document.getElementById('AI-AI-difficulty-white')
+const AIvsAIDepthBlack = document.getElementById('AI-AI-difficulty-black')
+
 function AIcontroAI() {
     nonColorare = true
     let color = datiDiGioco.turno
@@ -22,8 +25,7 @@ function AIcontroAI() {
 function checkProseguimento() {
     if(datiDiGioco.partitaFinita) return
 
-    d = depth == 3
+    depth == AIvsAIDepthWhite.value ? depth = AIvsAIDepthBlack.value : depth = AIvsAIDepthWhite.value
 
-    d ? depth = 2 : depth = 3
     setTimeout(AIcontroAI, 10)
 }

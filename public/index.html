@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="shortcut icon" href="images/iconaScacchi.png" type="image/x-icon">
     <title>Chess - The revenge</title>
 </head>
@@ -108,17 +108,22 @@
             <div id="tempo-di-valutazione">0 ms</div>
         </div>
         <div id="settings-before-game">
-            <div class="row">
-                <button id="gioca-offline">Gioca offline</button>
+            <div class="row" style="margin-top: 10px;">
+                <button id="gioca-offline" class="active">Gioca offline</button>
                 <button id='play-vs-ai'>Gioca contro AI</button>
                 <button id="ai-vs-ai">Ai vs AI</button>
             </div>
-            <div class="row">
-                <button id="start-game" style="margin-top: 10px;">Start</button>
+            <div class="row" style="flex-direction: column; margin-top: 20px;">
+                <p>Difficoltà AI contro umano 1(facile)-5(estremo per il PC)</p>
+                <input type="number" value="3" id="AI-human-difficulty" placeholder="difficoltà AI contro umano 1-5">
+                <p>Difficoltà AI contro AI bianchi 1(sega)-5(GM estremo per il PC)</p>
+                <input type="number" value="3" id="AI-AI-difficulty-white" placeholder="difficoltà AI contro AI (bianco 1-5)">
+                <p>Difficoltà AI contro AI neri 1(sega)-5(GM estremo per il PC)</p>
+                <input type="number" value="2" id="AI-AI-difficulty-black" placeholder="difficoltà AI contro AI (nero 1-5)">
             </div>
-        </div>
-        <div id="options-while-in-game">
-            <button id="stop-game"></button>
+            <div class="row">
+                <button class="active" id="start-game" style="margin-top: 10px;">Start</button>
+            </div>
         </div>
     </div>
 

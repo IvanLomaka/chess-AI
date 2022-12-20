@@ -179,7 +179,12 @@ function formattazioneIn2d() {
     }
 }
 
+const buttons = [giocaOffline, giocaControAI, AIvsAI]
+
 giocaOffline.addEventListener('click', button => {
+    buttons.forEach((element) => element.classList.remove('active'))
+    giocaOffline.classList.add('active')
+
     datiDiGioco = {
         turno: 'B',
         Turno: 'N',
@@ -198,7 +203,14 @@ giocaOffline.addEventListener('click', button => {
     }
 })
 
+const AIDepth = document.getElementById('AI-human-difficulty')
+
 giocaControAI.addEventListener('click', button => {
+    buttons.forEach((element) => element.classList.remove('active'))
+    giocaControAI.classList.add('active')
+
+    depth = AIDepth.value
+
     datiDiGioco = {
         turno: 'B',
         Turno: 'N',
@@ -218,6 +230,11 @@ giocaControAI.addEventListener('click', button => {
 })
 
 AIvsAI.addEventListener('click', button => {
+    buttons.forEach((element) => element.classList.remove('active'))
+    AIvsAI.classList.add('active')
+
+    depth = AIvsAIDepthWhite.value
+
     datiDiGioco = {
         turno: 'B',
         Turno: 'N',
