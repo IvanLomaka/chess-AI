@@ -56,17 +56,17 @@ let table = [
     ['BPE','BPE','BPE','BPE','BPE','BPE','BPE','BPE'],
     ['BTO','BCA','BAL','BRG','BRE','BAL','BCA','BTO']
 ]
-/*
-let table = [
-    ['','','','','','','',''],
-    ['','','','','','','',''],
-    ['','','','BAL','','','NPE',''],
-    ['','','','','','','BRE',''],
-    ['','BPE','BPE','NRE','NPE','','',''],
-    ['','','BTO','NCA','BCA','','','BRG'],
-    ['','','','','','','',''],
-    ['NCA','BCA','','','','','','']
-]*/
+
+// let table = [
+//     ['','','','','','','',''],
+//     ['','','','','','','',''],
+//     ['','','','BAL','','','NPE',''],
+//     ['','','','','','','',''],
+//     ['','BPE','BPE','NRE','NPE','','',''],
+//     ['','','BTO','','','','','BRG'],
+//     ['','','','','','','',''],
+//     ['NCA','BCA','','','BRE','','','BTO']
+// ]
 
 let scacchiera = [
     new Array(8),
@@ -91,7 +91,7 @@ for(let j = 0; j < scacchiera.length; j++) {
         }
 
         if(spazio.pedina.substring(1) == 'RE' || spazio.pedina.substring(1) == 'TO') {
-            spazio.aroccoFattibile = false
+            spazio.aroccoFattibile = true
         }
 
         scacchiera[j][i] = spazio

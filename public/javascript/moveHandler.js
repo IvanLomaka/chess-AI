@@ -472,7 +472,7 @@ function displayMosse(mosse) {
 
 function spostamentoFigura(coords) {
     if(coords.promozione) {
-        if((datiDiGioco.coloreAI == datiDiGioco.turno) || datiDiGioco.turnoAIvsAI) {
+        if((datiDiGioco.coloreAI == datiDiGioco.turno && datiDiGioco.partitaContro == 'AI') || datiDiGioco.turnoAIvsAI) {
             scacchiera[coords.casellaDiPartenzaY][coords.casellaDiPartenzaX].pedina = datiDiGioco.turno + 'RG'
         } else{
             let nuovaFigura = prompt('TO - RG - AL - CA')
@@ -735,7 +735,8 @@ function checkArocco(coords) {
         let mosse = []
         let mosseNonDefinitive = []
 
-        if(scacchiera[coords.y][coords.x + 3].aroccoFattibile && scacchiera[coords.y][coords.x + 3].pedina.substring(1) == 'TO') {
+
+        if(scacchiera[coords.y][7].aroccoFattibile && scacchiera[coords.y][7].pedina.substring(1) == 'TO') {
             mosseNonDefinitive = mosseNonDefinitive.concat(calcolatoreDellaMossa(coords, 0, 1, 2))
 
             coords = Object.assign({}, coordinate)
